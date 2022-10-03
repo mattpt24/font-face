@@ -41,7 +41,7 @@ body {
 }
 
 #hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,6 +85,14 @@ h1 {
     animation-delay: .5s;
 }
 
+
+
+.hero-svg {
+    width: 40vw;
+    position: absolute;
+    top: 10rem;
+    right: 10rem;
+}
 
 p {
     width: 40%;
