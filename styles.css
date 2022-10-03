@@ -25,7 +25,9 @@
     box-sizing: border-box;
 }
 
-
+html {
+    background: white;
+}
 
 body {
     background:url("./assets/images/background.png");
@@ -41,35 +43,12 @@ body {
 }
 
 #hero {
-    min-height: 100vh;
+    min-height:80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
-#hero:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    /* background: rgba(0,0,0,0.6); */
-    z-index: -1;
-    animation: blurBackground .5s;
-    animation-delay: .5s;
-    animation-fill-mode: forwards;
-}
-
-/*  3  */
-
-#hero div {
-    width: 70%;
-    position: absolute;
-    bottom: 4rem; left: 4rem;
-    z-index: 0;
-}
 
 h1 {
     transition: all .3s ease;
@@ -88,10 +67,7 @@ h1 {
 
 
 .hero-svg {
-    width: 40vw;
-    position: absolute;
-    top: 10rem;
-    right: 10rem;
+    width: 33.333vw;
 }
 
 p {
@@ -112,13 +88,10 @@ p {
     transition: all .3s ease;
     padding: .5rem 2rem;
     outline: none;
+    border-radius: 50px;
     font-size: 1.2rem;
     font-family: 'gt-walsheim-medium';
     font-weight: 300;
-    opacity: 0;
-    animation: entranceAnimation 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 1.5s;
 }
 
 .btn-light {
@@ -161,18 +134,23 @@ button:hover {
     font-family: 'gt-walsheim-bold';
 }
 
+header {
+    display: flex;
+    justify-content: center;
+}
+
 nav {
     display: flex;
-    justify-content: space-between;
-    padding:2rem;
+    justify-content: space-evenly;
+    padding:2rem 0;
     align-items: center;
     font-family: 'gt-walsheim-medium';
-    font-weight: 300;
+    font-weight: 400;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
+    margin: 0 auto;
     z-index: 999;
 }
 
@@ -187,7 +165,7 @@ h4 {
     color: #372866;;
     display: flex;
     justify-content: space-around;
-    width: 40%;
+    width: 50%;
     align-items: center;
     list-style: none;
 }
@@ -218,18 +196,9 @@ h4 {
 }
 
 
-.contact {
-    background: #372866;
-    color: #fff;
-    padding: .5rem 2rem;
-    border-radius: 30px;
-}
 
-.contact:hover {
-    transition: all .3s ease;
-    color: white!important;
-    opacity: .8;
-}
+
+
 
 
 @keyframes entranceAnimation{
@@ -243,5 +212,11 @@ h4 {
         opacity: 1;
         transform: translateY(0);
     }
+
+}
+
+
+
+@media screen and (max-width: 500px) {
 
 }
