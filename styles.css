@@ -5,6 +5,20 @@
 }
 
 
+
+@font-face {
+    font-family: 'gt-walsheim-bold';
+    src: url("./assets/font2/GTWalsheimPro-Bold.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gt-walsheim-medium';
+    src: url("./assets/font2/GTWalsheimPro-Regular.ttf");
+    font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +28,7 @@
 
 
 body {
-    background:url("./assets/images/1hero.jpg");
+    background:url("./assets/images/background.png");
     background-size: cover;
     background-position: center center;
 }
@@ -41,7 +55,7 @@ body {
     width: 100%;
     height: 100%;
     content: "";
-    background: rgba(0,0,0,0.6);
+    /* background: rgba(0,0,0,0.6); */
     z-index: -1;
     animation: blurBackground .5s;
     animation-delay: .5s;
@@ -59,49 +73,39 @@ body {
 
 h1 {
     transition: all .3s ease;
-    font-size: 8rem;
+    font-size: 3rem;
     font-family: 'druk';
-    color: rgb(236, 236, 236);
+    font-family: 'gt-walsheim-bold';
+    color: #372866;
     letter-spacing: 1px;
     opacity: 0;
+    width: 40%;
     animation: entranceAnimation 1s;
     animation-fill-mode: forwards;
     animation-delay: .5s;
-    text-transform: uppercase;
 }
 
-h1:hover {
-    transition: all .3s ease;
-    color: #0673d9;
-    margin-left: 2rem;
-}
 
 p {
-    font-size: 1rem;
     width: 40%;
-    font-family: 'druk';
     font-weight: lighter;
-    font-size: 1.5rem;
-    color: rgb(236, 236, 236);
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    color: #372866;
+    font-family: 'gt-walsheim-medium';
     font-weight: 300;
-    margin-bottom: 1.5rem;
+    margin: 2rem 0;
     opacity: 0;
     animation: entranceAnimation 1s;
     animation-fill-mode: forwards;
     animation-delay: 1s;
 }
 
-button {
+.btn {
     transition: all .3s ease;
     padding: .5rem 2rem;
     outline: none;
-    background: #0673d9;
-    border: solid 2px #0673d9; 
-    color: #fdd5a7;
-    border-radius: 30px;
     font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'gt-walsheim-medium';
     font-weight: 300;
     opacity: 0;
     animation: entranceAnimation 1s;
@@ -109,37 +113,44 @@ button {
     animation-delay: 1.5s;
 }
 
+.btn-light {
+    background: none;
+    border: solid 2px #372866;
+    color: #372866;
+}
+
+.btn-dark {
+    background: #372866;
+    border: solid 2px #372866;
+    color: #fff;
+}
+
 h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     letter-spacing: 5px;
-    color: #0673d9;
+    color: #FF0049;
     text-transform: uppercase;
     opacity: 0;
     animation: entranceAnimation 1s;
     animation-fill-mode: forwards;
     animation-delay: .5s;
+    margin-bottom: 1rem;
 }
 
 button:hover {
     transition: all .3s ease;
     opacity: .5;
     color: #fff;
+    background: #372866;
+    cursor: pointer;
 }
 
 
-@keyframes typeAnimation {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+.nav-logo {
+    color: #372866;
+    font-size: 1.6rem;
+    font-family: 'gt-walsheim-bold';
 }
 
 nav {
@@ -147,24 +158,25 @@ nav {
     justify-content: space-between;
     padding:2rem;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'gt-walsheim-medium';
     font-weight: 300;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+
     z-index: 999;
 }
 
 h4 {
-    color: white;
-    font-size: 1.8rem;
+    color: #372866;
+    font-size: .5rem;
     font-weight: bold;
 }
 
 .nav__list  {
     transition: all .3s ease;
-    color: white;
+    color: #372866;;
     display: flex;
     justify-content: space-around;
     width: 40%;
@@ -174,7 +186,7 @@ h4 {
 
 .nav__link {
     transition: all .3s ease;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -187,20 +199,20 @@ h4 {
 .nav__list  .nav__link:hover {
     transition: all .3s;
     opacity: 1;
-    color: #fff;
+    color: #372866;
 }
 
 
 .emphasised-txt {
     transition: all .3s ease;
     font-weight: 400;
-    color: #D97706;
+    color: #FF0049;
 }
 
 
 .contact {
-    background: #0673d9;
-    color: #84c3ff;;
+    background: #372866;
+    color: #fff;
     padding: .5rem 2rem;
     border-radius: 30px;
 }
